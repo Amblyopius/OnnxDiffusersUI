@@ -362,7 +362,9 @@ def _encode_prompt(
     num_images_per_prompt,
     do_classifier_free_guidance,
     negative_prompt,
-    max_embeddings_multiples=10
+    max_embeddings_multiples=10,
+    prompt_embeds: Optional[np.ndarray] = None,
+    negative_prompt_embeds: Optional[np.ndarray] = None,
 ):
     r"""
     Encodes the prompt into text encoder hidden states.
